@@ -1,6 +1,5 @@
-export const PhotographyPage = () => {
-  return (
-    <div>PhotographyPage</div>
-  )
-}
+import { PhotoCardCarousel } from "../PhotoCardCarousel";
 
+export const PhotographyPage = () => {
+  return <PhotoCardCarousel />;
+};
