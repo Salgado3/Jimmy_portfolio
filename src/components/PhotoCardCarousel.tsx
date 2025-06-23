@@ -54,7 +54,7 @@ export const PhotoCardCarousel = () => {
   return (
     <Carousel
       slideSize={{ base: "50%", sm: "50%" }}
-      slideGap={2}
+      slideGap={1}
       emblaOptions={{
         loop: true,
         dragFree: true,

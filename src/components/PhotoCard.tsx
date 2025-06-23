@@ -11,7 +11,7 @@ export const PhotoCard = ({ image, title, category }: CardProps) => {
   return (
     <Paper
       shadow="md"
-      p="xl"
+      p="md"
       radius="md"
       style={{ backgroundImage: `url(${image})` }}
       className={style.card}
