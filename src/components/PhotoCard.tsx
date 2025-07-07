@@ -1,13 +1,29 @@
-import { Button, Paper, Text, Title } from "@mantine/core";
+import { Button, Modal, Paper, Text, Title } from "@mantine/core";
 import style from "./photoCard.module.css";
+import { useState, type Dispatch, type SetStateAction } from "react";
 
 type CardProps = {
   image: string;
   title: string;
   category: string;
+  open: () => void;
+  setModalInfo: Dispatch<
+    SetStateAction<{ img: string; title: string; category: string }>
+  >;
 };
 
-export const PhotoCard = ({ image, title, category }: CardProps) => {
+export const PhotoCard = ({
+  image,
+  title,
+  category,
+  open,
+  setModalInfo,
+}: CardProps) => {
+  const handleClick = () => {
+    setModalInfo(() => ({ img: image, title: title, category: category }));
+    open();
+  };
+
   return (
     <Paper
       shadow="md"
@@ -20,12 +36,12 @@ export const PhotoCard = ({ image, title, category }: CardProps) => {
         <Text className={style.category} size="xs">
           {category}
         </Text>
-        <Title order={3} className={style.title}>
+        <Title order={1} className={style.title}>
           {title}
         </Title>
       </div>
-      <Button variant="white" color="dark">
-        Read article
+      <Button variant="white" color="dark" onClick={() => handleClick()}>
+        expand
       </Button>
     </Paper>
   );

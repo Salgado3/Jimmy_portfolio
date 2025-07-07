@@ -1,7 +1,7 @@
 import { MainContainer } from "./components/MainContainer";
 import { MantineProvider } from "@mantine/core";
-import "./App.css";
-import "@mantine/carousel/styles.css";
+// import "./App.css";
+
 function App() {
   return (
     <MantineProvider>
