@@ -1,27 +1,29 @@
+import { Tabs } from "@mantine/core";
+import {
+  IconPhoto,
+  IconMessageCircle,
+  IconSettings,
+} from "@tabler/icons-react";
+
 import style from "./navBar.module.css";
 
-export const NavBar = ({
-  setView,
-}: {
-  setView: React.SetStateAction<string>;
-}) => {
-  const handleClick = (e) => {
-    setView(e.target.value);
-  };
+export const NavBar = ({ setView }) => {
   return (
-    <div className={style.container}>
-      <button onClick={(e) => handleClick(e)} value="about">
-        About
-      </button>
-      <button onClick={(e) => handleClick(e)} value="portfolio">
-        Portfolio
-      </button>
-      <button onClick={(e) => handleClick(e)} value="resume">
-        Resume
-      </button>
-      <button onClick={(e) => handleClick(e)} value="photography">
-        photography
-      </button>
-    </div>
+    <Tabs defaultValue="about" onChange={setView}>
+      <Tabs.List>
+        <Tabs.Tab value="about" leftSection={<IconPhoto size={12} />}>
+          About me
+        </Tabs.Tab>
+        <Tabs.Tab value="portfolio" leftSection={<IconSettings size={12} />}>
+          portfolio
+        </Tabs.Tab>
+        <Tabs.Tab value="resume" leftSection={<IconSettings size={12} />}>
+          resume
+        </Tabs.Tab>
+        <Tabs.Tab value="photography" leftSection={<IconSettings size={12} />}>
+          photography
+        </Tabs.Tab>
+      </Tabs.List>
+    </Tabs>
   );
 };
