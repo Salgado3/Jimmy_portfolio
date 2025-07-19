@@ -1,6 +1,6 @@
-import { Button, Modal, Paper, Text, Title } from "@mantine/core";
+import { Button, Paper, Text, Title } from "@mantine/core";
 import style from "./photoCard.module.css";
-import { useState, type Dispatch, type SetStateAction } from "react";
+import { type Dispatch, type SetStateAction } from "react";
 
 type CardProps = {
   image: string;

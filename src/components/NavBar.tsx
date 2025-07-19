@@ -1,9 +1,5 @@
 import { Tabs } from "@mantine/core";
-import {
-  IconPhoto,
-  IconMessageCircle,
-  IconSettings,
-} from "@tabler/icons-react";
+import { IconPhoto, IconSettings } from "@tabler/icons-react";
 import type React from "react";
 import type { SetStateAction } from "react";
 
@@ -12,9 +8,12 @@ import type { SetStateAction } from "react";
 export const NavBar = ({
   setView,
 }: {
-  setView: React.Dispatch<SetStateAction<string | null>>;
+  setView: React.Dispatch<
+    SetStateAction<"about" | "portfolio" | "resume" | "photography">
+  >;
 }) => {
   return (
+    //@ts-expect-error
     <Tabs defaultValue="about" onChange={setView}>
       <Tabs.List>
         <Tabs.Tab value="about" leftSection={<IconPhoto size={12} />}>

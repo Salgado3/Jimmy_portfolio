@@ -1,12 +1,12 @@
-import { Accordion, useMantineTheme } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
-import { IconPhoto } from "@tabler/icons-react";
+// import { useMantineTheme } from "@mantine/core";
+// import { useMediaQuery } from "@mantine/hooks";
+// import { IconPhoto } from "@tabler/icons-react";
 
-import style from "./sidePanel.module.css";
+// import style from "./sidePanel.module.css";
 
 export const SidePanel = () => {
-  const theme = useMantineTheme();
-  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
+  // const theme = useMantineTheme();
+  // const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
   return (
     <>
       <div>

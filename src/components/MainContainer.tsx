@@ -17,6 +17,7 @@ export const MainContainer = () => {
     <div className={isMobile ? style.mobileContainer : style.container}>
       <SidePanel />
       <div className={isMobile ? style.mobileMainPage : style.mainPage}>
+        //@ts-ignore
         <NavBar setView={setView} />
         <PageContainer view={view} />
       </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Carousel } from "@mantine/carousel";
-import { CloseButton, Modal, useMantineTheme } from "@mantine/core";
+import { Modal, useMantineTheme } from "@mantine/core";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { PhotoCard } from "./PhotoCard";
 
@@ -363,7 +363,6 @@ export const PhotoCardCarousel = () => {
                 backgroundColor: "white",
                 height: "14px",
                 width: "14px",
-                
               }}
             />
           </>
