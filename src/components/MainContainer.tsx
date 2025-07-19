@@ -9,14 +9,14 @@ import { useMantineTheme } from "@mantine/core";
 
 export const MainContainer = () => {
   const theme = useMantineTheme();
-  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
+  const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
   const [view, setView] = useState<
     "about" | "portfolio" | "resume" | "photography"
   >("about");
   return (
-    <div className={mobile ? style.mobileContainer : style.container}>
+    <div className={isMobile ? style.mobileContainer : style.container}>
       <SidePanel />
-      <div className={style.mainPage}>
+      <div className={isMobile ? style.mobileMainPage : style.mainPage}>
         <NavBar setView={setView} />
         <PageContainer view={view} />
       </div>

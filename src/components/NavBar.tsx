@@ -4,10 +4,16 @@ import {
   IconMessageCircle,
   IconSettings,
 } from "@tabler/icons-react";
+import type React from "react";
+import type { SetStateAction } from "react";
 
-import style from "./navBar.module.css";
+// import style from "./navBar.module.css";
 
-export const NavBar = ({ setView }) => {
+export const NavBar = ({
+  setView,
+}: {
+  setView: React.Dispatch<SetStateAction<string | null>>;
+}) => {
   return (
     <Tabs defaultValue="about" onChange={setView}>
       <Tabs.List>

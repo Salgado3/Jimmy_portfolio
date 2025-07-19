@@ -1,6 +1,12 @@
 .mobileContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.mobileMainPage {
+  align-self: center;
+  width: 80vw;
 }
 
 .container {

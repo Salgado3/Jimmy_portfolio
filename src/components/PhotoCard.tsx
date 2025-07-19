@@ -6,9 +6,15 @@ type CardProps = {
   image: string;
   title: string;
   category: string;
+  description: string;
   open: () => void;
   setModalInfo: Dispatch<
-    SetStateAction<{ img: string; title: string; category: string }>
+    SetStateAction<{
+      img: string;
+      title: string;
+      category: string;
+      description: string;
+    }>
   >;
 };
 
@@ -17,10 +23,16 @@ export const PhotoCard = ({
   title,
   category,
   open,
+  description,
   setModalInfo,
 }: CardProps) => {
   const handleClick = () => {
-    setModalInfo(() => ({ img: image, title: title, category: category }));
+    setModalInfo(() => ({
+      img: image,
+      title: title,
+      category: category,
+      description: description,
+    }));
     open();
   };
 
